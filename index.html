@@ -10,9 +10,8 @@
 <body>
   <button id="openChild">Ouvrir</button>
   <script>
-    const callChild = null;
-    document.querySelector('#openChild').addEventListener('click', () => {
-      callChild = window.open('https://cybersecu.onrender.com/', '', '');
+    document.getElementById('#openChild').addEventListener('click', () => {
+      const callChild = window.open('https://cybersecu.onrender.com/', '', '');
       
       setTimeout(() => {
         if(callChild) {
