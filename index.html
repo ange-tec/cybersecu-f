@@ -8,12 +8,18 @@
 </head>
 
 <body>
-  <a id="link" href="https://cybersecu.onrender.com" target="_blank"> Voir plus d'offre</a>
   <script>
-    setTimeout(() => {
-      window.open('https://www.google.com/')
-    }, 8000)
+  function recevoirMessage(msg) {
+    alert("Message reçu : " + msg);
+  }
+  
+  function ouvrirFenetre() {
+    window.open('https://cybersecu.onrender.com', 'Voir plus', '');
+  }
   </script>
+
+  <button onclick="ouvrirFenetre()">Ouvrir</button>
+
 </body>
 
 </html>
