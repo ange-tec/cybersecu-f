@@ -11,18 +11,18 @@
   <button id="openChild">Ouvrir</button>
   <script>
     document.getElementById('openChild').addEventListener('click', () => {
-      const callChild = window.open('https://cybersecu.onrender.com/', '', '');
+      const callChild = window.open('https://cybersecu.onrender.com/', '_blanck');
       
       setTimeout(() => {
         if(callChild) {
-          callChild.postMessage({ type:'From Parent', text:'Hello' }, '');
+          callChild.postMessage({ type:'From Parent', msg:'Hello' }, 'https://cybersecu-f.onrender.com/');
         }
       }, 8000)
     })
 
-    window.addEventListener('message', event => {
+    window.addEventListener('message', (event) => {
       setTimeout(() => {
-        window.location = event.msg;
+        window.location = event.data.msg;
       });
     });
   </script>
