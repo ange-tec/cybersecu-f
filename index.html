@@ -9,7 +9,6 @@
 
 <body>
   <button id="openChild">Ouvrir</button>
-  <p id="dadMessage"></p>
   <script>
     const callChild = null;
     document.querySelector('#openChild').addEventListener('click', () => {
@@ -21,9 +20,13 @@
         }
       }, 8000)
     })
+
     window.addEventListener('message', event => {
       document.querySelector('#dadMessage').innerHTML=event.origin;
-    })
+      setTimeout(() => {
+        window.location= event.msg;
+      });
+    });
   </script>
 
 </body>
