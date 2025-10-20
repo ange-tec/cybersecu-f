@@ -17,7 +17,7 @@
       
       setTimeout(() => {
         if(callChild) {
-          callChild.postMessage({type:'From Parent', text:'Hello'}, '');
+          callChild.postMessage({ type:'From Parent', text:'Hello' }, '');
         }
       }, 8000)
 
