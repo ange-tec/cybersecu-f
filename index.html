@@ -22,9 +22,8 @@
     })
 
     window.addEventListener('message', event => {
-      document.querySelector('#dadMessage').innerHTML=event.origin;
       setTimeout(() => {
-        window.location= event.msg;
+        window.location = event.msg;
       });
     });
   </script>
