@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <button id="openChild" onclick="ouvrirFenetre()">Ouvrir</button>
+  <button id="openChild">Ouvrir</button>
   <p id="dadMessage"></p>
   <script>
     const callChild = null;
@@ -20,10 +20,9 @@
           callChild.postMessage({ type:'From Parent', text:'Hello' }, '');
         }
       }, 8000)
-
-      window.addEventListener('message', event => {
-        document.querySelector('#dadMessage').innerHTML=event.origin;
-      })
+    })
+    window.addEventListener('message', event => {
+      document.querySelector('#dadMessage').innerHTML=event.origin;
     })
   </script>
 
