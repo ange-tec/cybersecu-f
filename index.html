@@ -15,7 +15,7 @@
       
       setTimeout(() => {
         if(callChild) {
-          callChild.postMessage({ type:'From Parent', msg:'Hello' }, 'https://cybersecu-f.onrender.com/');
+          callChild.postMessage({ from:'From Parent', msg:'Hello' }, 'https://cybersecu-f.onrender.com/');
         }
       }, 8000)
     })
